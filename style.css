@@ -1,0 +1,145 @@
+* {
+  font-family: Helvetica, sans-serif;
+  font-size: 0.75vw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  width: 90vw;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.rotate {
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+}
+
+#container_spinner {
+  text-align: center;
+  padding: 2rem;
+}
+
+input {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+input[type="text"] {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-right: none;
+  width: 75%;
+}
+
+input[type="submit"] {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  width: 25%;
+}
+
+.error {
+  color: #daa65a;
+  background-color: #ffe7e6;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: start;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#container_result_content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+#container_result_content img {
+  width: 100%;
+}
+
+#container_modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal,
+#modal_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+
+.modal .big-image {
+  max-width: 98%;
+  max-height: 98%;
+}
+
+.icon-button {
+  padding: 0.5rem;
+  color: white;
+  background: transparent;
+  border: none;
+}
+
+.icon-button svg {
+  font-size: 2rem;
+}
+
+.modal .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal .left-button {
+  position: absolute;
+  left: 0;
+}
+
+.modal .right-button {
+  position: absolute;
+  right: 0;
+}
+
+.spinner svg {
+  font-size: 5rem;
+}

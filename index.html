@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unsplash</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- form input -->
+      <form action="#" id="form">
+        <input
+          type="text"
+          name="topic"
+          id="topic"
+          placeholder="Enter a topic"
+          class="form-element"
+          onkeypress="on_key_press_input(event)"
+        />
+        <input type="submit" value="Search" class="form-element" />
+      </form>
+
+      <!-- spinner -->
+      <div class="hide" id="container_spinner">
+        <div class="spinner rotate">
+          <i class="fa fa-spinner"></i>
+        </div>
+      </div>
+
+      <!-- error message -->
+      <div id="container_error" class="hide">
+        <div class="error">
+          <p>
+            <i class="fa fa-exclamation-triangle" style="padding-right: 1em"></i
+            ><span id="error_message"></span>
+          </p>
+        </div>
+      </div>
+
+      <!-- modal/gallery -->
+      <div id="container_modal" class="hide">
+        <div class="modal">
+          <div id="modal_content"></div>
+
+          <button
+            class="icon-button close-button"
+            onclick="on_click_btn_close_modal()"
+          >
+            <i class="fa fa-regular fa-circle-xmark"></i>
+          </button>
+          <button class="icon-button left-button" onclick="on_click_btn_left()">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button
+            class="icon-button right-button"
+            onclick="on_click_btn_right()"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div
+            style="
+              position: absolute;
+              margin-top: auto;
+              margin-left: auto;
+              color: white;
+              z-index: -1;
+            "
+          >
+            <div class="spinner rotate">
+              <i class="fa fa-spinner"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- result -->
+      <div id="container_result">
+        <div id="container_result_content"></div>
+      </div>
+    </div>
+  </body>
+</html>
